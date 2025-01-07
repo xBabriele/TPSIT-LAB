@@ -1,1 +1,44 @@
+- GUIDA BASH -
 
+La bash (Bourne Again Shell) è un'evoluzione della precedente shell usata nei sistemi operativi Unix.
+Quest'ultima, a differenza delle obsoleta  shell Unix, offre una sintassi leggera e comprensibile, adatta
+per lavorare con il Sistema Operativo con gran facilità. Dopo questa piccola introduzione, passiamo adesso
+ai concetti fondamentali della Bash, analizzando il codice e la sintassi che possiamo usare:
+
+- start
+        dopo aver inizializzato la Bash Shell (non in tutti i SO Linux lavoriamo con la Bash Shell direttamente, ma sue varianti
+    come la csh, ksh, ecc...), ricercando nel menu (ALT+SPACEBAR) o utilizzando la shortcut dedicata (CTRL+ALT+X); ci ritr-
+        troveremo di fronte a un prompt dei comandi di questo tipo:
+
+        user_name@group dir> ...
+
+        Qui potremmo scrivere in maniera interattiva i comandi da eseguire nella nostra Shell. Utilizzarla in tale maniera però è 
+    come usare in maniera interattiva Python: Non c'è gusto. Quindi, vediamo come scrivere il nostro primo script Bash. per 
+        prima cosa, creiamo il file ed iniziamo ad editarlo:
+
+        vim main.sh
+
+        dopo questo, la prima cosa che scriviamo all'inizio del file è lo sha-bam!, scritto cosi: #!/bin/bash. Questo farà sì che
+    che il nostro codice venga eseguito nella Bash Shell (visto che, come ho detto precedentemente, la shell su cui lavoriamo
+    non è la Bash Shell), potendo lavorare quindi più facilmente con le variabili di sistema, comandi, ecc... Non concentrandoci
+        molto sui comandi che possiamo trascrivere, visto che sono gli stessi che usiamo nel prompt dei comandi; passiamo diretta
+        alla programmazione di questa Bash Shell.
+
+- Variabili
+        le variabili in bash possono essere dichiarate facilmente semplicemente scrivendo il loro nome, il simbolo dell'uguale
+    e il valore a loro assegnato. Le variabili in bash non sono "verbose" e possono quindi cambiare tipo con lo  strut-
+    turarsi del codice. ecco alcuni esempi:
+
+                - Var1="String"
+                - Var1=5
+                - Var1=true
+
+    per dichiarare un array possono invece utilizzare la sintassi: declare -A VarArray. Successivamente, per poterlo utilizzare,
+    basterà richiamare VarArray[index]=val, per inizializzare nuovi valori al suo interno. Oltre a questo, possiamo anche utilizzare
+    variabili di sistema da usare nel nostro programma, come:
+
+        $HOME
+        $PATH
+        $JAVA_HOME
+
+        Queste potranno essere richiamate senza essere inizializzate.
